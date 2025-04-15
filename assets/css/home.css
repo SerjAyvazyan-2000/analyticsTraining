@@ -1,0 +1,667 @@
+.hero {
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #fca311;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #ffb703;
+}
+.services {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.services-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+
+
+.about {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1 1 400px;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1 1 500px;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    font-size: 1.3rem;
+    color: #fca311;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+
+
+
+.faq {
+    background: #f9f9f9;
+    padding: 60px 20px;
+}
+
+
+.faq-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.faq-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 0 20px 20px;
+    color: #444;
+    font-size: 1rem;
+}
+
+.partners {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.partners-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.partners-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.partners-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.partner-logo {
+    background: #f3f3f3;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+}
+
+.partner-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.partner-logo img {
+    max-height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    mix-blend-mode: multiply;
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0%);
+}
+.slider {
+    background: #f5f5f5;
+    padding: 60px 0;
+}
+
+.slider-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slider-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.swiper {
+    padding: 30px 0;
+}
+
+.swiper-slide {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide-text {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.slide-author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.slide-role {
+    font-size: 0.95rem;
+    color: #888;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #333;
+}
+
+.contact {
+    background: #fafafa;
+    padding: 60px 0;
+}
+
+
+
+.contact-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.info-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.info-text {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.info-list li {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.info-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+.contact-form label{
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+
+.price {
+    background: #fff;
+    padding: 80px 20px;
+}
+
+.price-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.price-title {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.price-subtitle {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.price-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.price-card {
+    background: #f5f5f5;
+    border-radius: 16px;
+    padding: 30px 20px;
+    width: 300px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-card.featured {
+    background: #007bff;
+    color: white;
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.plan-features {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+    padding-left: 1.2em;
+    position: relative;
+}
+
+.plan-features li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+.price-card.featured .plan-features li::before {
+    color: #fff;
+}
+
+.plan-button {
+    padding: 12px 20px;
+    border: none;
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.plan-button:hover {
+    background: #218838;
+}
+.cookie-section{
+    margin-top: 80px;
+}
+
+.cookie-header {
+    color: black;
+    font-style: italic;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.cookie-section h1 {
+    font-size: 2.5rem;
+}
+
+.page-title {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.content h2{
+    color: #34495e;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.page-title h2 {
+    font-size: 1.8rem;
+}
+
+.page-title p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 15px 0;
+}
+
+/* Ссылки */
+.page-title a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.page-title a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .price-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .price-title {
+        font-size: 2rem;
+    }
+
+    .services-title {
+        font-size: 2rem;
+    }
+    .service-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+    .faq-title {
+        font-size: 2rem;
+    }
+    .faq-subtitle {
+        font-size: 1rem;
+    }
+
+    .partners-title {
+        font-size: 2rem;
+    }
+
+    .partners-subtitle {
+        font-size: 1rem;
+    }
+
+    .partner-logo {
+        padding: 15px;
+    }
+    .slider-title {
+        font-size: 1.7rem;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .slide-text {
+        font-size: 1rem;
+    }
+
+    .cookie-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
