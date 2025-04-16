@@ -29,11 +29,29 @@ header {
     display: flex;
 
 }
+.header-contact-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.header-contact-btn:hover {
+    background-color: #2980b9;
+}
+
 
 .header-logo {
     max-width: 50px;
     height: 50px;
     width: 100%;
+    position: relative;
+    z-index: 3;
 }
 .header-logo img{
     width: 100%;
@@ -73,7 +91,9 @@ header {
 }
 
 
-
+.mobile-item{
+    display: none;
+}
 @media (max-width: 1400px) {
 }
 
@@ -95,6 +115,9 @@ header {
         transition: .3s;
         z-index: 3;
     }
+        .header-contact-btn {
+            display: none;
+        }
 
 
     .menu-list {
@@ -102,6 +125,10 @@ header {
         flex-direction: column;
         gap: 12px;
         flex: 1 1 auto;
+        align-items: center;
+    }
+    .mobile-item{
+        display: block;
     }
 
     .menu-item {
@@ -196,6 +223,27 @@ header {
         position: relative;
 
     }
+    .contact-btn-mobile {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        white-space: nowrap;
+    }
+    .mobile-item span{
+        color: #2980b9;
+        font-size: 15px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .contact-btn-mobile:hover {
+        background-color: #2980b9;
+    }
+
 
     .menu-bg.active {
         right: 0;

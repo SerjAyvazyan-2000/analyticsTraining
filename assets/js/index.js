@@ -93,7 +93,19 @@ document.querySelectorAll('.home-link ').forEach(link => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('acceptCookies');
 
+    if (!localStorage.getItem('cookiesAccepted')) {
+        cookieBanner.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.style.display = 'none';
+    });
+});
 
 
 const swiper = new Swiper(".mySwiper", {
